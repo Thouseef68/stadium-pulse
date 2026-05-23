@@ -58,7 +58,7 @@ def predict_crowd_surge(gate_name):
     return max(int(poly_model(15)), 0)
 
 def get_live_weather():
-    owm_key = os.getenv("OWM_API_KEY")
+    owm_key = os.getenv("WEATHER_API_KEY")
     if owm_key:
         try:
             url = f"http://api.openweathermap.org/data/2.5/weather?q=Bengaluru&appid={owm_key}&units=metric"
