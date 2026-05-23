@@ -1,8 +1,122 @@
-🏟️ Stadium Pulse: AI Command CenterStadium Pulse is an enterprise-grade logistics and crisis management dashboard engineered for high-density sports venues. Utilizing the power of Google Gemini 2.5 Flash, the system provides real-time crowd routing, automated emergency response, and predictive analytics to ensure operational excellence during high-stakes events.🔗 Live AccessExperience the Command Center in real-time:👉 https://stadium-pulse-601476426997.asia-south1.run.app/⚡ Core CapabilitiesDynamic Routing Matrix: Computes tactical JSON workflows to divert crowd flows during critical match spikes (Toss, Innings Break, Exodus).Emergency Dispatch: One-click deployment protocols for medical incidents, concourse fire hazards, and stampede mitigation.Vision Analytics: Edge-based vision processing to detect crowd density and risk parameters from CCTV or uploaded frames.Meteorology Agent: Real-time integration with weather telemetry to adjust stadium mitigation strategies based on local climate conditions.Automated Comms: AI-driven voice announcement generation for instantaneous fan management.🛠️ Technical ArchitectureComponentTechnologyFrontendStreamlitIntelligenceGoogle Gemini 2.5 Flash (Vertex AI)InfrastructureGoogle Cloud Run (Serverless)Data IntegrityStrict JSON Schema Validation🚀 Deployment & Local SetupRunning LocallyClone the repository:Bashgit clone https://github.com/your-username/stadium-pulse.git
-cd stadium-pulse-finale
-Configure Environment:Create a .env file in the root directory:PlaintextGOOGLE_API_KEY=your_gemini_key_here
-WEATHER_API_KEY=your_weather_api_key_here
-Launch:Bashpip install -r requirements.txt
-streamlit run app.py
-Deploying to Google CloudThis application is containerized with Docker for seamless serverless deployment.Deploy:Bashgcloud run deploy stadium-pulse --source . --region asia-south1 --allow-unauthenticated
-🛡️ SecurityEnvironment Isolation: API keys are never stored in source control; they are injected via runtime environment variables.Schema Enforcement: All AI directive outputs are parsed through rigid JSON validation to prevent system failures.🤝 ContactFor operational inquiries or system integration, please reach out via the repository issues tracker.© 2026 Stadium Pulse Operations Team.
+# 🏟️ Stadium Pulse: AI Command Center
+
+An enterprise-grade AI-powered logistics and crisis management dashboard built for high-density sports venues.
+
+Stadium Pulse leverages Google Gemini 2.5 Flash and cloud-native infrastructure to provide:
+
+- Real-time crowd routing
+- Emergency response automation
+- Crowd risk analytics
+- Weather-aware operational decisions
+- AI-generated public communication
+
+Designed to maintain safety, operational efficiency, and rapid decision-making during high-pressure sporting events.
+
+---
+
+## 🚀 Live Demo
+
+Experience Stadium Pulse in action:
+
+🌐 Live Application:
+https://stadium-pulse-601476426997.asia-south1.run.app/
+
+---
+
+## 📌 Problem Statement
+
+Large stadiums face multiple operational challenges:
+
+- Crowd congestion during entry and exits
+- Delayed emergency response
+- Difficulty predicting risk situations
+- Weather disruptions
+- Communication delays
+
+Traditional monitoring systems often react after incidents occur.
+
+Stadium Pulse introduces predictive intelligence and automated decision support.
+
+---
+
+## ✨ Features
+
+### 🔄 Dynamic Routing Matrix
+Computes tactical routing workflows to redirect crowd movement during critical events:
+
+- Match toss
+- Innings break
+- Exit rush
+- Emergency evacuation
+
+Outputs structured JSON-based action plans.
+
+---
+
+### 🚨 Emergency Dispatch System
+
+One-click response activation for:
+
+- Medical emergencies
+- Fire incidents
+- Crowd stampede mitigation
+- Security escalation
+
+---
+
+### 👁️ Vision Analytics
+
+AI-powered crowd monitoring using CCTV feeds or uploaded images:
+
+- Crowd density estimation
+- Risk detection
+- Congestion alerts
+- Safety analysis
+
+---
+
+### 🌦️ Meteorology Agent
+
+Integrates live weather data for adaptive planning:
+
+- Rain alerts
+- Heat risk detection
+- Wind condition monitoring
+- Mitigation recommendations
+
+---
+
+### 📢 Automated Communication System
+
+Generates AI-powered stadium announcements:
+
+- Crowd instructions
+- Emergency messaging
+- Safety alerts
+- Event notifications
+
+---
+
+## 🏗️ System Architecture
+
+```text
+User Interface (Streamlit)
+            │
+            ▼
+Google Gemini 2.5 Flash
+            │
+ ┌──────────┼──────────┐
+ │          │          │
+ ▼          ▼          ▼
+
+Vision    Weather    Emergency
+Agent      Agent      Engine
+
+            │
+            ▼
+
+JSON Validation Layer
+            │
+            ▼
+
+Google Cloud Run Deployment
